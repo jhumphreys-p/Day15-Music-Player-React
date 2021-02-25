@@ -1,13 +1,154 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
 
-/* 
+*
+{
+outline:none;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+html{height:100%}
+ 
+body{
+background: black;
+font-family:'Source Sans Pro', sans-serif;;
+color:#000;
+}
 
-*/
+.list-group{
+    max-height: 19rem;
+    margin-bottom: 0.8rem;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.card{
+    background: #f7f7f7;
+border-radius: 1rem;
+width: 24rem;
+border: 1px solid #c1c1c1;
+}
+
+.row-player{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+ol{padding:0px 0px 0.938rem 0px;counter-reset: section;}
+
+ol li
+{
+list-style-type:none;
+padding:0.938rem 1.563rem 0.938rem 0.938rem;
+border-bottom:1px solid #cccccc;
+border-top:1px solid #ffffff;
+font-size:1.25em;
+color:#666666;
+text-shadow:0px 2px 0px #ffffff;
+cursor:pointer;
+-webkit-transition:0.2s;
+-o-transition:0.2s;
+-ms-transition:0.2s;
+-moz-transition:0.2s;
+transition:0.2s;
+}
+
+li:before {
+  counter-increment: section;      /* Increment the section counter */
+  content: "" counter(section) ""; /* Display the counter */
+  padding:0px 15px;
+  color:#999999;
+  text-shadow:0px 2px 0px #ffffff;
+}
+
+
+li:hover
+{
+background:#efefef;
+-webkit-transition:0.2s;
+-o-transition:0.2s;
+-ms-transition:0.2s;
+-moz-transition:0.2s;
+transition:0.2s;
+}
+
+ol li:first-child{border-top:none;}
+ol li:last-child{border-bottom:none;}
+
+.textalign
+{
+text-align:left!important;
+}
+
+/* Progress bar css */
+progress[value] {
+width: 100%;
+height:1.5rem;
+-webkit-appearance: none;
+appearance: none;
+border: 0px solid #000;
+}
+
+progress[value]::-webkit-progress-bar {
+background-color: #eee;
+border-radius: 0px;
+box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+progress[value]::-webkit-progress-value {
+background:red;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* CSS3 Counter */
+
+li:before {
+  counter-increment: section;      /* Increment the section counter */
+  content: "" counter(section) ""; /* Display the counter */
+  padding:0px 15px;
+  color:#999999;
+  text-shadow:0px 2px 0px #ffffff;
+}
+
+ .uvs-left {
+        border-radius: 2rem;
+ }
+
+ .uvs-left:hover,.uvs-left:focus, .btn-primary:active, .fa
+{
+text-shadow:0px 2px 0px #cacaca;
+-webkit-transition:0.2s;
+-o-transition:0.2s;
+-ms-transition:0.2s;
+-moz-transition:0.2s;
+transition:0.2s;
+  outline: none;
+  box-shadow: none;
+}
+
+ .fa{color:#666666;font-size:2.5em;}
+
+ /* width */
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px red; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fba800; 
+}
+
+.card > .list-group:last-child {
+    border-top: none;
+}
